@@ -1,6 +1,12 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
+import plotly.express as px
+
+# Menampilkan teks 
+st.subheader("Hello ^~^")
+st.subheader("")
+st.write("My Name is Aisyatuz")
 
 #1
 # reading the database
@@ -23,3 +29,20 @@ plt.ylabel('Tip')
 plt.colorbar(scatter)
 
 st.pyplot(fig)
+
+#2
+# Create scatter plot using Plotly Express
+fig = px.scatter(
+    data,
+    x="day",
+    y="tip",
+    color="size",
+    size="total_bill",
+    color_continuous_scale="reds",
+)
+
+# Display the plot using Streamlit in one tab
+with st.expander("Plotly Chart", expanded=True):
+    # Use the Streamlit theme (default).
+    st.plotly_chart(fig, theme="streamlit", use_container_width=True)
+
