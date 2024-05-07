@@ -31,20 +31,17 @@ plt.colorbar(scatter)
 st.pyplot(fig)
 
 #2
-# Add histogram data
-x1 = np.random.randn(200) - 2
-x2 = np.random.randn(200)
-x3 = np.random.randn(200) + 2
+# Create scatter plot using Plotly Express
+fig = px.scatter(
+    data,
+    x="day",
+    y="tip",
+    color="size",
+    size="total_bill",
+    color_continuous_scale="reds",
+)
 
-# Group data together
-hist_data = [x1, x2, x3]
-
-group_labels = ['Group 1', 'Group 2', 'Group 3']
-
-# Create distplot with custom bin_size
-fig = ff.create_distplot(
-        hist_data, group_labels, bin_size=[.1, .25, .5])
-
-# Plot!
-st.plotly_chart(fig, use_container_width=True)
-
+# Display the plot using Streamlit in one tab
+with st.expander("Plotly Chart", expanded=True):
+    # Use the Streamlit theme (default).
+    st.plotly_chart(fig, theme="streamlit", use_container_width=True)
