@@ -1,8 +1,7 @@
-import pandas as pd
 import streamlit as st
+import pandas as pd
+import numpy as np
 
-# reading the database
-data = pd.read_csv
+chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
 
-# printing the top 10 rows
-display(data.head(10))
+st.bar_chart(chart_data)
