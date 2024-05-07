@@ -6,16 +6,20 @@ import matplotlib.pyplot as plt
 # reading the database
 data = pd.read_csv("https://raw.githubusercontent.com/Aisyatuzz/davis-course-2024/main/tips.csv")
 
-# Create a scatter plot
+# printing the top 10 rows
+st.write(data.head(10))
+
+# Scatter plot with day against tip
 fig, ax = plt.subplots()
-ax.scatter(data['day'], data['tip'])
+scatter = ax.scatter(data['day'], data['tip'], c=data['size'], s=data['total_bill'])
 
 # Adding Title to the Plot
-ax.set_title("Scatter Plot")
+plt.title("Scatter Plot")
 
 # Setting the X and Y labels
-ax.set_xlabel('Day')
-ax.set_ylabel('Tip')
+plt.xlabel('Day')
+plt.ylabel('Tip')
 
-# Display the plot in Streamlit
+plt.colorbar(scatter)
+
 st.pyplot(fig)
