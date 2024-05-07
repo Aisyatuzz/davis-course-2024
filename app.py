@@ -3,11 +3,10 @@ import matplotlib.pyplot as plt
 import streamlit as st
 
 # reading the database
-data = pd.read_csv("https://github.com/Aisyatuzz/davis-course-2024/blob/main/tips.csv")
+data = pd.read_csv("https://raw.githubusercontent.com/Aisyatuzz/davis-course-2024/main/tips.csv")
 
 # Scatter plot with day against tip
-plt.plot(data['tip'])
-plt.plot(data['size'])
+plt.scatter(data['day'], data['tip'])
 
 # Adding Title to the Plot
 plt.title("Scatter Plot")
@@ -16,4 +15,5 @@ plt.title("Scatter Plot")
 plt.xlabel('Day')
 plt.ylabel('Tip')
 
-plt.show()
+# Displaying the plot in Streamlit
+st.pyplot()
