@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 
 # reading the database
-data = pd.read_csv("C:\\Users\\LENOVO\\Documents\\KULIAH\\Semester 6\\Data Visualisasi\\tips.csv")
+data = pd.read_csv("https://github.com/Aisyatuzz/davis-course-2024/blob/main/tips.csv")
 
 # Scatter plot with day against tip
 plt.plot(data['tip'])
