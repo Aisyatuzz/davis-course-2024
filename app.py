@@ -1,7 +1,7 @@
-import streamlit as st
+
 import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
+
 
 # reading the database
 data = pd.read_csv("https://raw.githubusercontent.com/Aisyatuzz/davis-course-2024/main/tips.csv")
@@ -16,5 +16,4 @@ plt.title("Scatter Plot")
 plt.xlabel('Day')
 plt.ylabel('Tip')
 
-st.pyplot(fig)
-
+plt.show()
