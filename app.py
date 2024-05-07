@@ -31,22 +31,12 @@ plt.colorbar(scatter)
 st.pyplot(fig)
 
 #2
-# Load sample dataset from Plotly Express
-# df = px.data.gapminder()
+# Select the data for each group
+male_data = data[data['sex'] == 'Male']['total_bill']
+female_data = data[data['sex'] == 'Female']['total_bill']
 
-# # Create scatter plot using Plotly Express
-# fig = px.scatter(
-#     df.query("year==2007"),
-#     x="gdpPercap",
-#     y="lifeExp",
-#     size="pop",
-#     color="continent",
-#     hover_name="country",
-#     log_x=True,
-#     size_max=60,
-# )
+# Create a figure using Plotly Express
+fig = px.histogram(data, x='total_bill', color='sex', marginal='rug')
 
-# # Display the plot using Streamlit in one tab
-# with st.expander("Plotly Chart", expanded=True):
-#     # Use the Streamlit theme (default).
-#     st.plotly_chart(fig, theme="streamlit", use_container_width=True)
+# Plot!
+st.plotly_chart(fig, use_container_width=True)
