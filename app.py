@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
-import plotly.figure_factory as ff
+import plotly.express as px
 
 # Menampilkan teks 
 st.subheader("Hello ^~^")
@@ -31,17 +31,22 @@ plt.colorbar(scatter)
 st.pyplot(fig)
 
 #2
-# Create scatter plot using Plotly Express
-fig = px.scatter(
-    data,
-    x="day",
-    y="tip",
-    color="size",
-    size="total_bill",
-    color_continuous_scale="reds",
-)
+# Load sample dataset from Plotly Express
+# df = px.data.gapminder()
 
-# Display the plot using Streamlit in one tab
-with st.expander("Plotly Chart", expanded=True):
-    # Use the Streamlit theme (default).
-    st.plotly_chart(fig, theme="streamlit", use_container_width=True)
+# # Create scatter plot using Plotly Express
+# fig = px.scatter(
+#     df.query("year==2007"),
+#     x="gdpPercap",
+#     y="lifeExp",
+#     size="pop",
+#     color="continent",
+#     hover_name="country",
+#     log_x=True,
+#     size_max=60,
+# )
+
+# # Display the plot using Streamlit in one tab
+# with st.expander("Plotly Chart", expanded=True):
+#     # Use the Streamlit theme (default).
+#     st.plotly_chart(fig, theme="streamlit", use_container_width=True)
