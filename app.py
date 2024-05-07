@@ -18,5 +18,4 @@ ax.set_xlabel('Day')
 ax.set_ylabel('Tip')
 
 # Display the plot in Streamlit
-plt.colorbar(scatter)
 st.pyplot(fig)
