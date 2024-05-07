@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 #1
 # reading the database
-data = pd.read_csv(url)
+data = pd.read_csv("https://raw.githubusercontent.com/Aisyatuzz/davis-course-2024/main/tips.csv")
 
 # printing the top 10 rows
 st.write(data.head(10))
