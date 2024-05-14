@@ -7,6 +7,7 @@ import plotly.express as px
 
 chart_data = pd.DataFrame(np.random.randn(20, 3), columns=["a", "b", "c"])
 
+print("username = " , st.secrets['username'])
 st.bar_chart(chart_data)
 
 
