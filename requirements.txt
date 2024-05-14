@@ -1,9 +1,8 @@
 streamlit
 pandas==2.2.1
 plotly==5.22.0
-matplotlib
-gTTS
 prophet
+matplotlib
 yfinance
 pandas-datareader
 numpy
@@ -12,3 +11,4 @@ openpyxl
 pymysql
 SQLAlchemy
 scipy
+gTTs
