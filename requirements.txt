@@ -12,3 +12,6 @@ pymysql
 SQLAlchemy
 scipy
 gTTs
+
+plotly
+pandas
