@@ -3,3 +3,12 @@ pandas==2.2.1
 plotly==5.22.0
 matplotlib
 gTTS
+prophet
+yfinance
+pandas-datareader
+numpy
+datetime
+openpyxl
+pymysql
+SQLAlchemy
+scipy
